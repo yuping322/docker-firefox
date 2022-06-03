@@ -26,6 +26,17 @@ RUN \
 # add local files
 COPY /root /
 
+
+
+
+WORKDIR /home/workspace/
+
+ENV LANG=C.UTF-8 \
+    LC_ALL=C.UTF-8 \
+    PUID=1000 \
+    PGID=1000 
+
+
 # ports and volumes
-EXPOSE 3000
+EXPOSE 10000
 VOLUME /config
